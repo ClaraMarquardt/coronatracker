@@ -23,7 +23,6 @@ pip install geopy numpy pandas
 3. Launch the website
 ```
 python -m http.server 5000
-
 ```
 
 4. Open http://0.0.0.0:5000/ in your browser and navigate to Frontend/Home.html
