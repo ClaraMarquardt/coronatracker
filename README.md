@@ -5,15 +5,15 @@ CoronaTracker is a Flask app that provides users with information about the numb
 ## Quickstart 
 
 ### Live
-Visit xxxx
+Coming Soon
 
 ### Local
 
 1. Clone the repository
 
 ```
-git clone https://github.com/gothinkster/flask-realworld-example-app.git
-cd flask-realworld-example-app
+git clone https://github.com/ClaraMarquardt/coronatracker.git
+cd coronatracker
 ```
 
 2. Launch the Flask app
