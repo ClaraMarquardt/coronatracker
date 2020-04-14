@@ -24,14 +24,14 @@ function DrawGraph(country, infection, death) {
 // GenerateOwnGraph
 function GenerateOwnGraph() {
 
-    navigator.geolocation.getCurrentPosition((position) => {
+    $.getJSON("http://ip-api.com/json", function (data, status) {
 
-      longitude = position.coords.longitude
-      latitude  = position.coords.latitude
+     longitude = data.lon;
+     latitude  = data.lat;
 
-      document.getElementById("location").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
+     document.getElementById("location").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
 
-      $.ajax({
+     $.ajax({
         url: "/update_owncountry",
         type: "get",
         data: {longitude: longitude, latitude:latitude},
@@ -39,9 +39,7 @@ function GenerateOwnGraph() {
           DrawGraph(response.country,response.infection, response.death);
         },
       });
-
     });
-  
 }
 
 // GenerateSelectGraph
