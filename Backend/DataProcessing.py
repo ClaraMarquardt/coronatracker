@@ -34,7 +34,7 @@ from geopy.geocoders import Nominatim
 
 # summary_corona_data
 # ---------------------------------------------#
-def summary_corona_data(datapath=os.path.join(app_root, "Backend/Data/CoronaData.csv")):
+def summary_corona_data(datapath = os.path.join(app_root, "Backend/Data/CoronaData.csv")):
 
 	# Load the data
 	corona_df = pd.read_csv(datapath)
@@ -52,7 +52,7 @@ def summary_corona_data(datapath=os.path.join(app_root, "Backend/Data/CoronaData
 
 # location_corona_data
 # ---------------------------------------------#
-def location_corona_data(longitude, latitude , country, datapath=os.path.join(app_root, "Backend/Data/CoronaData.csv")):
+def location_corona_data(longitude, latitude , country, datapath = os.path.join(app_root, "Backend/Data/CoronaData.csv")):
 
 	# Load the data
 	corona_df = pd.read_csv(datapath)
