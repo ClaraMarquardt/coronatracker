@@ -1,0 +1,16 @@
+# Data that will be needed from the backend
+
+* home
+- Number of total infections
+- Number of total deaths
+- List of countries
+
+* Updating
+
+- update_owncountry 
+> Receive: Longitude, latitude
+> Return: Country, infections in that country, deaths in that country
+
+- update_selectcountry 
+> Receive: Country
+> Return: Infections in that country, deaths in that country

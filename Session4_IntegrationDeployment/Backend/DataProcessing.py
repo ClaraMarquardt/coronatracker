@@ -37,7 +37,7 @@ from geopy.geocoders import Nominatim
 def summary_corona_data(datapath = os.path.join(app_root, "Backend/Data/CoronaData.csv")):
 
 	# Load the data
-	corona_df = pd.read_csv(datapath)
+	corona_df = pd.read_csv(datapath, encoding="utf-8")
 
 	# Obtain country list
 	country_list = corona_df["country"]
@@ -52,10 +52,10 @@ def summary_corona_data(datapath = os.path.join(app_root, "Backend/Data/CoronaDa
 
 # location_corona_data
 # ---------------------------------------------#
-def location_corona_data(longitude, latitude , country, datapath = os.path.join(app_root, "Backend/Data/CoronaData.csv")):
+def location_corona_data(longitude = None, latitude = None, country = None, datapath = os.path.join(app_root, "Backend/Data/CoronaData.csv")):
 
 	# Load the data
-	corona_df = pd.read_csv(datapath)
+	corona_df = pd.read_csv(datapath, encoding="utf-8")
 
 	# Geocode the longitude/latitude data if not provided with country
 	if (country == None):

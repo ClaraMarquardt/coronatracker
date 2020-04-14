@@ -28,19 +28,19 @@ import flask
 sys.path.append(os.path.normpath(os.path.join(app_root,'Backend')))
 from DataProcessing import *
 
-# Initialize the app
+# Initialize the application
 # ---------------------------------------------#
-app = flask.Flask(__name__, 
-	template_folder = os.path.join(app_root, 'Frontend/Templates'), 
-	static_folder = os.path.join(app_root, 'Frontend/Static'))
+application = flask.Flask(__name__, 
+	template_folder = os.path.join(app_root, 'Frontend'), 
+	static_folder =os.path.join(app_root, 'Frontend'))
 
 # ------------------------------------------------------------------------ #
 # Define Views
 # ------------------------------------------------------------------------ #
 
-# Home
+# home
 # ---------------------------------------------#
-@app.route('/home')
+@application.route('/home')
 def home_view():
 
 	# Generate the summary statistics
@@ -51,22 +51,35 @@ def home_view():
 		death_total = summary_data[1], country_list = summary_data[2] )
 	
 	
-# Vis
+# update_owncountry
 # ---------------------------------------------#
-@app.route('/vis')
-def view_view():
+@application.route('/update_owncountry')
+def update_owncountry_view():
 
 	# Retrieve the location-specific data
-	location_data = location_corona_data(flask.request.args.get('longitude', None), 
-		flask.request.args.get('latitude', None), flask.request.args.get('country', None))
+	location_data = location_corona_data(longitude = flask.request.args.get('longitude'), 
+		latitude = flask.request.args.get('latitude'))
 
 	# Pass the data to the home page
 	return flask.jsonify({"infection":location_data[0], "death":location_data[1], "country":location_data[2]})
  
+# update_selectcountry
+# ---------------------------------------------#
+@application.route('/update_selectcountry')
+def update_selectcountry_view():
+
+	# Retrieve the location-specific data
+	location_data = location_corona_data(country = flask.request.args.get('country'))
+
+	# Pass the data to the home page
+	return flask.jsonify({"infection":location_data[0], "death":location_data[1]})
+
 # ------------------------------------------------------------------------ #
-# Launch the Flask app
+# Launch the Flask application
 # ------------------------------------------------------------------------ #
-app.run()
+
+if __name__ == "__main__":
+	application.run()
 
 # ------------------------------------------------------------------------ #
 # ------------------------------------------------------------------------ #

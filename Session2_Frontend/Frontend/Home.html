@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html>
+
+<!-- Header -->
+<header>
+
+  <!-- Dependencies -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="gcharts.js"></script>  
+  <link rel=stylesheet type=text/css href="Style.css">
+  
+</header>
+
+<!-- Body -->
+<body>
+
+    <!-- Overview of the website -->
+    <br> <br> <br>
+
+    <p><h1 align="center">Overall 2634 people have been infected by COVID-19 and 3452 people have died</h1></p>
+
+     <br> <br> <br>
+     <hr>
+     <br> <br> <br>
+
+    <!-- Buttons to generate graph & graph -->
+    <div style="text-align:center" id="chart_placeholder">
+      
+      <button onclick="GenerateOwnGraph()">View statistics in the country I am currently in</button>
+
+      <p id="location"></p>
+
+      <br><br>
+
+      <p>View statistics in another country</p>
+
+      <select id="country_dropdown">
+        <option value="United States">United States</option>
+        <option value="Germany">Germany</option> 
+      </select>
+
+      <br><br>
+
+      <button onclick="GenerateSelectGraph()">View statistics in the selected country</button>
+
+      <div id="chart" style="text-align:center"> </div>
+
+    </div>
+ 
+  
+</body>
+</html>
