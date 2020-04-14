@@ -21,3 +21,4 @@ cd coronatracker
 python coronatracker.py
 ```
 
+3. Open http://localhost:5000/home in your browser
