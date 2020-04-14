@@ -14,17 +14,19 @@ git clone https://github.com/ClaraMarquardt/coronatracker.git
 cd coronatracker/Session3_Backend
 ```
 
+2. Install dependencies
+```
 pip install -U Flask
 pip install geopy numpy pandas
+```
 
-
-2. Launch the website
+3. Launch the website
 ```
 python -m http.server 5000
 
 ```
 
-3. Open http://0.0.0.0:5000/ in your browser and navigate to Frontend/Home.html
+4. Open http://0.0.0.0:5000/ in your browser and navigate to Frontend/Home.html
 
 ## Quickstart - Backend
 

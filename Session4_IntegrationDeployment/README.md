@@ -17,12 +17,16 @@ http://flaskenv3.eba-jrrppwrc.us-east-2.elasticbeanstalk.com/home
 git clone https://github.com/ClaraMarquardt/coronatracker.git
 cd coronatracker/Session4_IntegrationDeployment
 ```
+
+2. Install dependencies
+```
 pip install -U Flask
 pip install geopy numpy pandas
+```
 
-2. Launch the Flask app
+3. Launch the Flask app
 ```
 python application.py
 ```
 
-3. Open http://127.0.0.1:5000/home in your browser
+4. Open http://127.0.0.1:5000/home in your browser
