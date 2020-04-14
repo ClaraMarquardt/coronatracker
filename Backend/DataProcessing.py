@@ -24,7 +24,7 @@ app_root = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file_
 import pandas as pd
 import numpy as np
 
-## Geocoding Packages
+## Geocoding Dependencies
 import geopy
 from geopy.geocoders import Nominatim
 
@@ -58,7 +58,7 @@ def location_corona_data(longitude, latitude , country, datapath=os.path.join(ap
 	corona_df = pd.read_csv(datapath)
 
 	# Geocode the longitude/latitude data if not provided with country
-	if (country==None):
+	if (country == None):
 
 		## Initialize the geocoder
 		locator      = Nominatim(user_agent="myGeocoder")
