@@ -68,7 +68,6 @@ def location_corona_data(longitude, latitude , country, datapath=os.path.join(ap
 		geocode_data = locator.reverse(coordinates)
 		country      = geocode_data.raw['address']['country']
 
-
 	# Subset to the location
 	corona_location_df = corona_df[corona_df["country"]==country]
 
@@ -78,7 +77,6 @@ def location_corona_data(longitude, latitude , country, datapath=os.path.join(ap
 
 	# Return the summary statistics
 	return([infection, death, country])
-
 
 # ------------------------------------------------------------------------ #
 # ------------------------------------------------------------------------ #

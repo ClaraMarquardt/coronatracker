@@ -56,14 +56,11 @@
       // drawBarColors
       google.charts.load('current', {packages: ['corechart', 'bar']});
       
-
       function DrawGraph(country, infection, death) {
-
-        //google.charts.setOnLoadCallback(DrawGraph);
       
         var data = google.visualization.arrayToDataTable([
           ['Country', 'Infections', 'Deaths'],
-          [country,infection, death ]
+          [country, infection, death]
         ]);
 
         var options = {
@@ -78,7 +75,6 @@
         chart.draw(data, options);
 
       }
-  
 
       // GenerateOwnGraph
       function GenerateOwnGraph() {
@@ -122,4 +118,3 @@
   
 </body>
 </html>
-<!-- END -->
