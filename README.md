@@ -1,6 +1,6 @@
 # CoronaTracker
 
-CoronaTracker is a Flask app that provides users with information about the number of confirmed Corona cases and deaths in the they are currently in. 
+CoronaTracker is a Flask app that provides users with information about the number of confirmed Corona cases and deaths in different countries. 
 
 ## Quickstart 
 
