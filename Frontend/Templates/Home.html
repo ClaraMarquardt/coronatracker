@@ -24,7 +24,7 @@
      <hr>
      <br> <br> <br>
 
-    <!-- Button to generate graph & location & graph-->
+    <!-- Buttons to generate graph & graph -->
     <div style="text-align:center" id="chart_placeholder">
       
       <button onclick="GenerateOwnGraph()">View statistics in the country I am currently in</button>
@@ -33,7 +33,7 @@
 
       <br><br>
 
-      <p >View statistics in another country</p>
+      <p>View statistics in another country</p>
 
       <select id="country_dropdown">
         {% for each in country_list %}
@@ -53,7 +53,7 @@
     <!-- Scripts -->
     <script>
 
-      // drawBarColors
+      // DrawGraph
       google.charts.load('current', {packages: ['corechart', 'bar']});
       
       function DrawGraph(country, infection, death) {
