@@ -2,7 +2,7 @@
 
 # CoronaTracker
 
-# File:         CoronaTracker.py
+# File:         application.py
 # Maintainer:   DP Team
 # Last Updated: 2020-04-13
 # Language:     Python 3.7
